@@ -1,3 +1,7 @@
+;;; init-preload-local.el --- custom packages
+;;; Commentary:
+;;; Code:
+
 (setq-default c-basic-offset 4
               c-default-style (quote ((c-mode . "k&r")
                                       (c++-mode . "k&r")
@@ -5,8 +9,7 @@
                                       (awk-mode . "awk")
                                       (other . "gnu")))
               c-ignore-auto-fill (quote (cpp))
-              c-mode-common-hook (quote (linum-mode
-                                         c-toggle-hungry-state))
+              c-mode-common-hook (quote (c-toggle-hungry-state))
               indent-tabs-mode nil
               tab-always-indent (quote complete)
               tab-width 4
@@ -14,8 +17,7 @@
                               (turn-on-auto-fill
                                turn-on-flyspell
                                text-mode-hook-identify))
-              ispell-local-dictionary "brasileiro"
-              linum-format "%3d │ ")
+              ispell-local-dictionary "brasileiro")
 
 ;; Install use-package
 (unless package-archive-contents           ;; Refresh the packages descriptions
@@ -112,3 +114,4 @@
       (setq org-latex-hyperref-template "\\hypersetup{\n pdfauthor={%a},\n pdftitle={%t},\n pdfkeywords={%k},\n pdfsubject={%d},\n pdfcreator={%c},\n pdflang={%L},\n colorlinks=true,\n linkcolor=blue,\n citecolor=blue,\n filecolor=magenta,\n urlcolor=blue,\n bookmarksdepth=4}\n"))))
 
 (provide 'init-preload-local)
+;;; init-preload-local.el ends here
